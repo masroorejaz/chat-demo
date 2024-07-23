@@ -1,0 +1,187 @@
+/* General styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
+/* Chat container */
+.chat-container {
+  height: 100vh;
+  background: rgb(91, 140, 220);
+  background: radial-gradient(
+    circle,
+    rgba(91, 140, 220, 1) 0%,
+    rgba(65, 115, 200, 1) 100%
+  );
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+.back-button,
+.settings-button {
+  font-size: 24px;
+}
+
+.back-button {
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid #ffffff;
+  padding: 5px 12px;
+  color: #ffffff;
+}
+.settings-button {
+  color: #4a90e2;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 18px;
+}
+
+/* Chat messages */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.message-content {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.message-header .name {
+  margin-left: 10px;
+}
+.avatar {
+  font-size: 26px;
+  color: #4a90e2;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 12px 14px;
+}
+.name {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  padding: 10px 10px 10px 0;
+  border-radius: 10px;
+}
+
+.audio-button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: max-content;
+  align-self: flex-end;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #416ec3;
+}
+
+.speaking-status {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.action-buttons {
+  display: flex;
+}
+
+.mute-button,
+.end-call-button {
+  background: #ffffff;
+  border: none;
+  color: #4a90e2;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.end-call-button {
+  background: red;
+  color: #ffffff;
+  transform: rotate(135deg);
+}
+
+.scroll-to-top-button {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
