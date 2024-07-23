@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./styles/index.css";
-import "./styles/flex.css";
+import "./styles/index.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
