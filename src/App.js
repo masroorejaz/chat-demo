@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
+// Sample chat data
 const data = [
   {
     name: "Alex Cooper",
@@ -29,13 +30,17 @@ const data = [
   },
 ];
 
+// Main Chat Interface component
 const ChatInterface = () => {
+  // State for microphone toggle
   const [micOn, setMicOn] = useState(false);
 
+  // Handler for toggling the microphone
   const handleMicToggle = () => {
     setMicOn((prevMicOn) => !prevMicOn);
   };
 
+  // Function to scroll to the top of the chat messages div
   const scrollToTopOfDiv = (divId) => {
     const div = document.getElementById(divId);
     if (div) {
@@ -45,6 +50,7 @@ const ChatInterface = () => {
 
   return (
     <div className="chat-container flex flex-column">
+      {/* Header section with back and settings buttons */}
       <header className="header flex justify-between items-center">
         <button className="back-button">
           <FontAwesomeIcon icon={faChevronLeft} />
@@ -52,13 +58,16 @@ const ChatInterface = () => {
         <button className="settings-button">A</button>
       </header>
 
+      {/* Chat messages display area */}
       <div className="chat-messages flex flex-column" id="chat-messages">
         {data.map((message, index) => (
           <div className="message flex flex-column" key={index}>
+            {/* Message header with avatar and name */}
             <div className="message-header flex flex-base flex-row w-100">
               <FontAwesomeIcon icon={faUser} className="avatar" />
               <span className="name">{message.name}</span>
             </div>
+            {/* Message content with text and optional audio button */}
             <div className="message-content flex flex-column w-100">
               <p className="text">{message.message}</p>
               {message.audio && (
@@ -71,6 +80,7 @@ const ChatInterface = () => {
         ))}
       </div>
 
+      {/* Footer section with speaking status, action buttons, and scroll-to-top button */}
       <footer className="footer flex flex-wrap justify-between items-center">
         <span className="speaking-status w-100 text-center">
           ...Joe is Speaking
